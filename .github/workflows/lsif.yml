@@ -5,12 +5,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@50fbc622fc4ef5163becd7fab6573eac35f8462e # v1.2.0
       - name: Generate LSIF data
-        uses: sourcegraph/lsif-go-action@master
+        uses: sourcegraph/lsif-go-action@33cb87a8bb8dc634f385db8d90463c3bddfd9c85 # master
         with:
           verbose: "true"
       - name: Upload LSIF data
-        uses: sourcegraph/lsif-upload-action@master
+        uses: sourcegraph/lsif-upload-action@9fd43e6298eb70ca0213e481c4338689f3920f58 # master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
